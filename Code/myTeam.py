@@ -45,7 +45,6 @@ def createTeam(firstIndex, secondIndex, isRed, first='OffensiveAgent',
 	behavior is what you want for the nightly contest.
 	"""
 
-	# The following line is an example only; feel free to change it.
 	return [eval(first)(firstIndex), eval(second)(secondIndex)]
 
 
