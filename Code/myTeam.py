@@ -419,8 +419,8 @@ class OffensiveAgent(InferenceAgent):
             if min(scaredTimes) <= 6 and minGhostDistances < 4:
                 minGhostDistances *= -1
 
-            return 2 * self.getScore(gameState) - 100 * len(targetFood) - 
-                   3 * minFoodDistance - 10000 * len(capsulesChasing) - 
+            return 2 * self.getScore(gameState) - 100 * len(targetFood) - \
+                   3 * minFoodDistance - 10000 * len(capsulesChasing) - \
                    5 * minCapsuleChasingDistance + 100 * minGhostDistances
 
 
@@ -492,6 +492,6 @@ class DefensiveAgent(InferenceAgent):
         if self.offensing == False:
             return -999999 * len(invaders) - 10 * minPacDistances - minCapsuleDistance
         else:
-            return 2 * self.getScore(gameState) - 100 * len(targetFood) - 
+            return 2 * self.getScore(gameState) - 100 * len(targetFood) - \
                    3 * minFoodDistance + minGhostDistances
 
